@@ -17,6 +17,12 @@
     },
     created () {
       let that = this
+
+      // 移除动画效果
+      setTimeout(() => {
+        document.getElementById('preloadAnimate').remove();
+      }, 2000);
+
       enquireScreen(deviceType => {
         // tablet
         if (deviceType === 0) {
@@ -32,7 +38,6 @@
           that.$store.commit('TOGGLE_DEVICE', 'desktop')
           that.$store.dispatch('setSidebar', true)
         }
-
       })
     }
   }
@@ -40,5 +45,6 @@
 <style>
   #app {
     height: 100%;
+    overflow: hidden scroll;
   }
 </style>

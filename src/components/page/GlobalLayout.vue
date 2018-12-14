@@ -64,7 +64,7 @@
       </a-layout-content>
 
       <!-- layout footer -->
-      <a-layout-footer style="padding: 0px">
+      <a-layout-footer style="padding: 0">
         <global-footer />
       </a-layout-footer>
     </a-layout>
@@ -130,7 +130,8 @@
 <style lang="scss">
   body {
     // 打开滚动条固定显示
-    overflow-y: scroll;
+    overflow: hidden;
+    height: 100%;
 
     &.colorWeak {
       filter: invert(80%);
