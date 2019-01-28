@@ -147,7 +147,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="less">
   body {
     // 打开滚动条固定显示
     overflow-y: scroll;
@@ -181,20 +181,22 @@
           min-width: 800px;
         }
       }
-      .sidemenu {
-        .ant-header-fixedHeader {
-
-          &.ant-header-side-opened, &.ant-header-side-closed  {
-            width: 100%
-          }
-        }
-      }
-
       .topmenu {
         /* 必须为 topmenu  才能启用流式布局 */
         &.content-width-Fluid {
           .header-index-wide {
             margin-left: 0;
+          }
+        }
+      }
+    }
+
+    &.mobile {
+      .sidemenu {
+        .ant-header-fixedHeader {
+
+          &.ant-header-side-opened, &.ant-header-side-closed  {
+            width: 100%
           }
         }
       }
@@ -491,6 +493,10 @@
     position: relative;
     z-index: 10;
 
+    .ant-layout-sider-children:hover {
+      overflow-y: auto;
+    }
+
     &.ant-fixed-sidemenu {
       position: fixed;
       height: 100%;
@@ -545,6 +551,11 @@
   }
 
   // 外置的样式控制
+  .user-dropdown-menu {
+    span {
+      user-select: none;
+    }
+  }
   .user-dropdown-menu-wrapper.ant-dropdown-menu {
     padding: 4px 0;
 

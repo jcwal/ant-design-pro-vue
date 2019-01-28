@@ -46,7 +46,7 @@
 
           <div style="height: 20px">
             <a-tooltip class="setting-drawer-theme-color-colorBlock" v-for="(item, index) in colorList" :key="index">
-              <template slot='title'>
+              <template slot="title">
                 {{ item.key }}
               </template>
               <a-tag :color="item.color" @click="changeColor(item.color)">
@@ -90,7 +90,7 @@
             <a-list :split="false">
               <a-list-item>
                 <a-tooltip slot="actions">
-                  <template slot='title'>
+                  <template slot="title">
                     该设定仅 [顶部栏导航] 时有效
                   </template>
                   <a-select size="small" style="width: 80px;" :defaultValue="contentWidth" @change="handleContentWidthChange">
@@ -164,7 +164,7 @@
 <script>
   import DetailList from '@/components/tools/DetailList'
   import SettingItem from '@/components/setting/SettingItem'
-  import config from '@/defaultSettings'
+  import config from '@/config/defaultSettings'
   import { updateTheme, updateColorWeak, colorList } from '@/components/tools/setting'
   import { mixin, mixinDevice } from '@/utils/mixin'
 
@@ -280,7 +280,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
   .setting-drawer-index-content {
 
